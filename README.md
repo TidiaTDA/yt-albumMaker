@@ -5,7 +5,7 @@
 A simple script using yt-dlp to bulk download videos converted into music from youtube, primarily thought to be used with Newpipe's share playlist feature
 
 ## Requirements
-
+yt-dlp
 
 ## How to use
 
