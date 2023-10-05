@@ -1,10 +1,10 @@
 # yt-albumMaker
-## Version 0.1
+## Version 0.2
 A bulk-downloader of youtube videos into audios meant to download playlists into music albums
 
 ### Downloading format
-- [ ] Specify metadata
-  - [ ] **IMPORTANT Set track index according to position in playlist**  
+- [x] Specify metadata
+  - [x] **IMPORTANT Set track index according to position in playlist**  
   - [ ] Try to add Author if possible
   - [ ] Manually specify metadata
 - [ ] Filename formatting and error handling
