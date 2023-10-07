@@ -1,5 +1,5 @@
 # yt-albumMaker
-## Version 0.2
+## Version 0.3
 A bulk-downloader of youtube videos into audios meant to download playlists into music albums
 
 ### Downloading format

@@ -21,9 +21,16 @@ def setAlbumIndex(file,index):
     metatag.save()
 
 
+def sanitizeFilename(string):
+    prefix = len(ALBUMNAME) + 1
+    substring = string[prefix:]
+    substring = substring.replace("|","｜").replace(":","：").replace("/","⧸")
+    return ALBUMNAME + "/" + substring
+
 def downloadVideo(address,index):
 
     options = {'extract_audio': True,
+               'restrict-filenames' : True,
                'format': 'bestaudio',
                'outtmpl': ALBUMNAME + "/" + '%(title)s',
                'postprocessors': [{
@@ -41,7 +48,7 @@ def downloadVideo(address,index):
         video_title = info_dict['title']
         print(video_title)
         video.download(address)
-        setAlbumIndex(getFilename(video_title),index)
+        setAlbumIndex(sanitizeFilename(getFilename(video_title)),index)
 
 if __name__ == '__main__':
     file = open("videolist.txt")
@@ -66,5 +73,4 @@ def metadataTest():
     audio.save()
     audio = EasyID3("2024/Bury the Light - Vergil's battle theme from Devil May Cry 5 Special Edition.mp3")
     print(audio['album'])
-
 

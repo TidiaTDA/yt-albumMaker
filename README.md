@@ -1,4 +1,4 @@
-#yt-albumMaker version 0.2
+#yt-albumMaker version 0.3
 
 ## What this is
 
